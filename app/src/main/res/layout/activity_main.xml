@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#FAFAFA">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="18dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Secure Storage Lab"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:textColor="#1E1E1E"
+            android:paddingBottom="4dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SharedPreferences, EncryptedSharedPreferences, fichiers internes, cache et stockage externe app-specific."
+            android:textSize="14sp"
+            android:textColor="#666666"
+            android:paddingBottom="16dp" />
+
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nom utilisateur"
+            android:inputType="textPersonName" />
+
+        <Spinner
+            android:id="@+id/spLang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Thème sombre"
+                android:textSize="16sp" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/swDark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/etToken"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Token secret"
+            android:inputType="textPassword" />
+
+        <Button
+            android:id="@+id/btnSavePrefs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sauvegarder prefs + token chiffré" />
+
+        <Button
+            android:id="@+id/btnLoadPrefs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Charger prefs" />
+
+        <Button
+            android:id="@+id/btnSaveJson"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sauvegarder fichiers internes JSON + note" />
+
+        <Button
+            android:id="@+id/btnLoadJson"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Charger fichiers internes" />
+
+        <Button
+            android:id="@+id/btnWriteCache"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Écrire cache temporaire" />
+
+        <Button
+            android:id="@+id/btnReadCache"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lire cache temporaire" />
+
+        <Button
+            android:id="@+id/btnExportExternal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Exporter fichier externe app-specific" />
+
+        <Button
+            android:id="@+id/btnReadExternal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lire fichier externe app-specific" />
+
+        <Button
+            android:id="@+id/btnClear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Effacer tout"
+            android:backgroundTint="#D32F2F"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/tvResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="14dp"
+            android:textSize="15sp"
+            android:textColor="#222222"
+            android:text="Résultat..." />
+
+    </LinearLayout>
+</ScrollView>
